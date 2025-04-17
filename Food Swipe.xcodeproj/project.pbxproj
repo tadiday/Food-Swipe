@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		46DBA9CE2DB18DAC009CC304 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 46DBA9CA2DB18DAC009CC304 /* .gitignore */; };
+		46DBA9D02DB18DAC009CC304 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 46DBA9CD2DB18DAC009CC304 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		46A001712DAAE5A300DD8206 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		46A001632DAAE5A100DD8206 /* Food Swipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Swipe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A001702DAAE5A300DD8206 /* Food SwipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food SwipeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A0017A2DAAE5A300DD8206 /* Food SwipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food SwipeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46DBA9CA2DB18DAC009CC304 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		46DBA9CD2DB18DAC009CC304 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -79,6 +86,8 @@
 				46A001732DAAE5A300DD8206 /* Food SwipeTests */,
 				46A0017D2DAAE5A300DD8206 /* Food SwipeUITests */,
 				46A001642DAAE5A100DD8206 /* Products */,
+				46DBA9CD2DB18DAC009CC304 /* README.md */,
+				46DBA9CA2DB18DAC009CC304 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +221,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46DBA9CE2DB18DAC009CC304 /* .gitignore in Resources */,
+				46DBA9D02DB18DAC009CC304 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
