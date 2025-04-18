@@ -21,13 +21,16 @@ struct WelcomeView: View {
 
             HStack(spacing: 16) {
                 Button(action: {
-                    // handle login
+                    // Navigate to Login
                 }) {
                     Text("LOG IN")
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(Color.white)
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(Color.white)
+                        )
                         .foregroundColor(.black)
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
@@ -36,7 +39,7 @@ struct WelcomeView: View {
                 }
 
                 Button(action: {
-                    // handle register
+                    // Navigate to resgister
                 }) {
                     Text("REGISTER")
                         .fontWeight(.bold)
@@ -50,7 +53,7 @@ struct WelcomeView: View {
             .padding(.horizontal)
             .padding(.bottom, 40)
         }
-        .background(Color.gray.opacity(0.1))
+        .background(Color.red)
         .ignoresSafeArea()
     }
 }
