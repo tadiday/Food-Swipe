@@ -19,16 +19,19 @@ struct WelcomeView: View {
     
     var body: some View {
         NavigationStack {
+            
             VStack {
-               
- 
-                    
                     VStack{
                         Spacer()
                         Text("Food Swipe")
+                            .foregroundColor(.white)
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                            .padding(.bottom, 8)
+                            .foregroundColor(.black)
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 8)
+                            .background(Color.black.opacity(0.7))
+                            .cornerRadius(10)
                         Spacer()
                     }
                     .background(
@@ -36,7 +39,7 @@ struct WelcomeView: View {
                                .resizable()
                                .scaledToFill()
                                .edgesIgnoringSafeArea(.all)
-                               .blur(radius: 1.5)
+                               .blur(radius: 1.0)
                        )
                     .padding(.bottom, 10)
                 
