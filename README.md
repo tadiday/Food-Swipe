@@ -83,7 +83,7 @@ Swipe for food, built with love.
 
 
 # Structure
-
+<pre> ```
 /ios-app/
 ├── Assets/               ← Images, icons, color sets (in Assets.xcassets)
 ├── Views/                ← Screens and subviews (components)
@@ -103,3 +103,4 @@ Swipe for food, built with love.
 ├── Resources/            ← Plist files, configs, etc.
 │   └── GoogleService-Info.plist
 └── ContentView.swift     ← Entry point
+``` </pre>
