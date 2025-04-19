@@ -21,33 +21,33 @@ struct WelcomeView: View {
         NavigationStack {
             
             VStack {
-                    VStack{
-                        Spacer()
-                        Text("Food Swipe")
-                            .foregroundColor(.white)
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(.black)
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, 8)
-                            .background(Color.black.opacity(0.7))
-                            .cornerRadius(10)
-                        Spacer()
-                    }
-                    .background(
-                           Image("food_bg")
-                               .resizable()
-                               .scaledToFill()
-                               .edgesIgnoringSafeArea(.all)
-                               .blur(radius: 1.0)
-                       )
-                    .padding(.bottom, 10)
+                
+                // Title and Background
+                VStack{
+                    Spacer()
+                    Text("Food Swipe")
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
+                        .background(Color.black.opacity(0.7))
+                        .cornerRadius(10)
+                    Spacer()
+                }
+                .background(
+                       Image("food_bg")
+                           .resizable()
+                           .scaledToFill()
+                           .edgesIgnoringSafeArea(.all)
+                           .blur(radius: 1.0)
+                   )
+                .padding(.bottom, 10)
                 
 
 
-                
-
-                
+                // Login button
                 HStack(spacing: 16) {
                     NavigationLink(value: WelcomeDestination.login) {
                         Text("LOG IN")
@@ -64,6 +64,7 @@ struct WelcomeView: View {
                             )
                     }
 
+                    // Resgister button
                     NavigationLink(value: WelcomeDestination.register) {
                         Text("REGISTER")
                             .fontWeight(.bold)
