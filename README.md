@@ -76,7 +76,7 @@ Swipe for food, built with love.
 - [X] Initialize `ios-app/` SwiftUI project in Xcode
 - [X] Set up Firebase project
 - [ ] Integrate Firebase Auth
-- [W] Build Login/Sign-up flow
+- [ ] Build Login/Sign-up flow
 - [ ] Build basic Swipe UI with static data
 - [ ] Fetch real data from Google Places API
 - [ ] Save swipes to Firestore
