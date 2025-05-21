@@ -6,47 +6,48 @@
 //
 import SwiftUI
 
-struct FoodCard: View {
-    var restaurantName: String
-    var restaurantImage: String // image name for now, later can be URL
+struct Restaurant {
+    var name: String
+    var image: String
     var rating: Double
-    var priceLevel: String // like "$$" or "$$$"
-    var distance: String // like "2.5 mi"
-    
+    var priceLevel: String
+    var distance: String
+}
+
+struct FoodCard: View {
+    var restaurant: Restaurant
+
     var body: some View {
-        VStack(spacing: 20){
+        VStack(spacing: 20) {
             Text("Crave")
                 .font(.largeTitle)
                 .bold()
-                
+
             GeometryReader { geometry in
                 ZStack(alignment: .bottomLeading) {
                     // Background Image
-                    
-                    Image("food_bg")
+                    Image(restaurant.image)
                         .resizable()
                         .scaledToFill()
-                        .frame(width: geometry.size.width * 1) // 90% of the screen width
-                        .frame(height: geometry.size.height * 0.9) // 70% of the screen height
+                        .frame(width: geometry.size.width)
+                        .frame(height: geometry.size.height * 0.9)
                         .clipped()
                         .cornerRadius(20)
                         .shadow(radius: 10)
-                    
-                    
+
                     // Info Text
                     VStack(alignment: .leading, spacing: 8) {
-                        Text(restaurantName)
+                        Text(restaurant.name)
                             .font(.title)
                             .bold()
                             .foregroundColor(.white)
-                            .lineLimit(2) // Only allow one line, truncate if it's too long
+                            .lineLimit(2)
                             .truncationMode(.tail)
-                    
-                        
+
                         HStack(spacing: 10) {
-                            Text("⭐️ \(String(format: "%.1f", rating))")
-                            Text(priceLevel)
-                            Text(distance)
+                            Text("⭐️ \(String(format: "%.1f", restaurant.rating))")
+                            Text(restaurant.priceLevel)
+                            Text(restaurant.distance)
                         }
                         .foregroundColor(.white)
                         .font(.subheadline)
@@ -63,13 +64,8 @@ struct FoodCard: View {
 }
 
 #Preview {
-    FoodCard(
-        restaurantName: "Sushi Heaven",
-        restaurantImage: "exampleImage",
-        rating: 4.7,
-        priceLevel: "$$",
-        distance: "1.2 mi"
-    )
+    FoodCard(restaurant: Restaurant(name: "Sushi Heaven", image: "food_bg", rating: 4.7, priceLevel: "$$", distance: "1.2 mi"))
+
 }
 
 

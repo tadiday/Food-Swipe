@@ -19,6 +19,8 @@ struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var isPasswordVisible = false
+    @State private var loginError: String?
+    @State private var showingAlert = false
     
     var body: some View {
         VStack(spacing: 20) {
@@ -113,6 +115,17 @@ struct LoginView: View {
             // Login
             Button(action: {
                 // handle login: TODO
+                print("Login button tapped")
+                AuthService.shared.signIn(email: email, password: password) { result in
+                    switch result {
+                    case .success(let user):
+                        print("Logged in as: \(user.email ?? "")")
+                        // Navigate or update UI
+                    case .failure(let error):
+                        loginError = error.localizedDescription
+                        showingAlert = true
+                    }
+                }
             }) {
                 Text("Log in")
                     .foregroundColor(.white)
