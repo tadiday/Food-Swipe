@@ -1,6 +1,6 @@
 # Food Swipe
 
-iOS app project built with SwiftUI
+Current build iOS app from an old React app with SwiftUI
 Swipe for food, built with love.
 
 
