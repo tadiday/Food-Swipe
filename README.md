@@ -9,7 +9,7 @@ Swipe for food, built with love.
 ### Frontend (mobile-first)
 - iOS: Swift + SwiftUI
 - Android: Kotlin (later)
-- Web: React / Next.js (later)
+- Web: React / Next.js with TypeScript to improve the old version of the web
 
 ### Backend
 - Firebase:
